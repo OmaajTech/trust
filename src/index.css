@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base font stack */
+body {
+  font-family: Geeza, "Ping Fang", "Binance Plex", ui-sans-serif, system-ui,
+    -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* font-family: "Binance PLEX", "Roboto", "Ubuntu", "Cantarell", "Noto Sans",
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Ping Fang", "Geeza Pro",
+    system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji"; */
+  background-color: #fff;
+  color: #252525;
+}
+
+img {
+  @apply object-contain w-full h-full rounded-full;
+}
+
+@layer components {
+  .wallet-container {
+    @apply w-full max-w-md mx-auto;
+  }
+
+  .allFlex {
+    @apply flex items-center justify-between;
+  }
+
+  .allFlex2 {
+    @apply flex items-center justify-center;
+  }
+
+  .backIm {
+    background: linear-gradient(
+        106deg,
+        rgb(222, 226, 246) 22.98%,
+        rgb(255, 255, 255) 99.14%
+      ),
+      rgb(217, 217, 217);
+  }
+
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: #cbcbcb transparent;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    height: 1px; /* for horizontal scrollbar */
+    width: 5px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    /* background: #f3f4f6;  */
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #cccbcb;
+    border-radius: 9999px;
+  }
+
+  .swap-rotate {
+    transition: transform 0.4s ease;
+  }
+  .swap-rotate:active {
+    transform: rotate(180deg);
+  }
+
+  .no-spinner::-webkit-inner-spin-button,
+  .no-spinner::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .no-spinner {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer utilities {
+  .transist {
+    transition: all 0.2s ease-in-out;
+  }
+  .transist1 {
+    transition: all 0.3s ease-in-out;
+  }
+}
