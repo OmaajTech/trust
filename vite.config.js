@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -14,8 +14,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
-  base: "./", // ✅ this is the key fix
-  build: {
-    outDir: "dist", // ✅ make sure this matches your Vercel config
-  },
+  base: "/",
 });
