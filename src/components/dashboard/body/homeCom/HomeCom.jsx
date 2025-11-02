@@ -1,5 +1,4 @@
 import { useContext } from "react";
-// import Header from "../../header/header";
 import HomeBody from "./homeBody/HomeBody";
 import HomeHeader from "./homeHeader/HomeHeader";
 import HomeSemiHeader from "./homeSemiHeader/HomeSemiHeader";
@@ -8,6 +7,7 @@ import { FetchUserDataContext } from "../../../../context/fetchUserData/FetchUse
 import { HiMiniExclamationCircle } from "react-icons/hi2";
 import { FaAngleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Header from "../../header/Header";
 
 const HomeCom = () => {
   const { userInfo, loading } = useContext(FetchUserDataContext);
@@ -39,7 +39,7 @@ const HomeCom = () => {
             <HomeSemiHeader />
             <HomeBody />
           </div>
-          {/* <Header /> */}
+          <Header />
         </div>
       ) : (
         <SuccessfulRegistered />
