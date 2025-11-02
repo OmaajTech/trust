@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { CoinsContext } from "../../../../context/coins/CoinsContext";
 import useFormState from "../../../../hooks/useFormState";
@@ -15,7 +15,6 @@ import {
   setSearchedAdminCoin,
 } from "../../../../redux/features/swapCoins/swapCoinSlice";
 import useSelectedItems from "../../../../hooks/useSelectedItems";
-import ModalPayment from "../../../../reuseableCom/modalPayment/ModalPayment";
 import YouPay from "../swapCom/swapCoins/YouPay";
 import SwapFolder from "../../../../reuseableCom/swapFolder/SwapFolder";
 import { addDoc, collection } from "firebase/firestore";

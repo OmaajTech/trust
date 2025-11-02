@@ -47,7 +47,7 @@ import RedirectBackUp from "../../../auth/redirection/RedirectBackUp";
 import VerifyKeyPhrase from "../../../auth/registrationCom/VerifyKeyPhrase";
 import RedirectVerify from "../../../auth/redirection/RedirectVerify";
 import NotFound from "../../../../pages/notFound/NotFound";
-// import AdminReceiverCoinCom from "../../body/adminReceiverCom/adminReceiverCoinCom";
+import AdminReceiverCoinCom from "../../body/adminReceiverCom/adminReceiverCoinCom";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -80,7 +80,7 @@ export const router = createBrowserRouter(
             <Route index element={<AdminDashboard />} />
             <Route path="singleUser/:userId" element={<SingleUserDashboard />}>
               <Route index element={<UsersInfo />} />
-              {/* <Route path="deposit" element={<AdminReceiverCoinCom />} /> */}
+              <Route path="deposit" element={<AdminReceiverCoinCom />} />
               <Route path="history" element={<AdminUserHistory />} />
               <Route
                 path="mining-activated"
