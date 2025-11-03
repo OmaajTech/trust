@@ -90,7 +90,7 @@ const UsersInfo = () => {
     pending
   );
   return (
-    <div className="w-full px-2 mt-10 allFlex2">
+    <div className="w-full px-2 mt-14 allFlex2">
       {showLoading ? (
         <BasicLoader />
       ) : (

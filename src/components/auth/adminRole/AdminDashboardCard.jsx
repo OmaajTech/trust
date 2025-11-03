@@ -1,24 +1,6 @@
 import { Link } from "react-router-dom";
-import { doc, updateDoc } from "firebase/firestore";
-import { db } from "../../../firebase/firebaseConfig";
-import useGenerateKeys from "../../../hooks/useGenerateKeys";
 
 const AdminDashboardCard = ({ user, index }) => {
-  const { generateNewKeys } = useGenerateKeys();
-
-  const handleGenerateKey = async () => {
-    const newKey = generateNewKeys();
-
-    try {
-      const userDocRef = doc(db, "users", user.id);
-      await updateDoc(userDocRef, {
-        miningKeys: newKey,
-      });
-    } catch (error) {
-      console.error("Error generating key:", error);
-    }
-  };
-
   const findAt = user?.email.indexOf("@");
   const uidCut = user?.id.slice(0, 10);
   const email = user?.email.slice(0, findAt);

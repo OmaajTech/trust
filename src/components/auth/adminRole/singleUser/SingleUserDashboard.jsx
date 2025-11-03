@@ -17,7 +17,7 @@ const SingleUserDashboard = () => {
           <div className="z-30 block customMiniTablet:hidden">
             {toggleBar ? (
               <div
-                className="absolute text-2xl text-customGray-200 left-2 top-2"
+                className="absolute text-2xl text-customGray-200 left-3 top-5"
                 onClick={() => setToggleBar(false)}
               >
                 <FiMenu />

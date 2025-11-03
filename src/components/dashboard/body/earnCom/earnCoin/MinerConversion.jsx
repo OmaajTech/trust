@@ -41,6 +41,7 @@ const MinerConversion = () => {
 
   const activateMining = () => {
     if (formState.miningForm !== keys) return;
+    if (formState.miningForm === "") return;
     getNewKeyState();
     const newState = {
       coinMiningSlug: findSlug?.slug,
@@ -110,6 +111,9 @@ const MinerConversion = () => {
                 className={clsx(
                   "absolute bottom-0 w-full transist h-[48px] rounded-full text-white tracking-wider font-bold allFlex2 gap-2",
                   formState.miningForm === keys
+                    ? "bg-customPurple-100 cursor-pointer"
+                    : "bg-customPurple-100 bg-opacity-50 cursor-not-allowed",
+                  formState.miningForm !== ""
                     ? "bg-customPurple-100 cursor-pointer"
                     : "bg-customPurple-100 bg-opacity-50 cursor-not-allowed"
                 )}
